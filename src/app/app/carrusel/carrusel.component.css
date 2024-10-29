@@ -1,0 +1,91 @@
+/* Carrusel */
+.movie-carousel {
+  padding: 20px;
+  position: relative;
+}
+
+.movie-list-container {
+  overflow: hidden; 
+  width: 100%;
+}
+
+.movie-list {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.movie-item {
+  min-width: 150px;
+  flex: 0 0 auto;
+  margin-right: 10px; 
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease; 
+}
+
+.movie-item:hover {
+  transform: scale(1.2); 
+  z-index: 10; 
+}
+
+.movie-item img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ranking {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* Flechas */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+  border: none;
+  color: #333; /* Color del texto */
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%; /* Bordes redondeados */
+  width: 40px; /* Ancho fijo */
+  height: 40px; /* Altura fija */
+  display: flex; /* Flexbox para centrar el contenido */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+.left-arrow {
+  left: -20px; /* Ajusta la posición de la flecha izquierda */
+}
+
+.right-arrow {
+  right: -20px; /* Ajusta la posición de la flecha derecha */
+}
+
+.carousel-arrow:hover {
+  background-color: rgba(255, 255, 255, 1); /* Cambio de color al hacer hover */
+  transform: translateY(-50%) scale(2); 
+}
+
+.carousel-arrow:focus {
+  outline: none; 
+}
+.carousel-arrow:disabled {
+  color: #ccc; /* Color gris para el botón deshabilitado */
+  cursor: not-allowed; /* Cambia el cursor */
+}
+

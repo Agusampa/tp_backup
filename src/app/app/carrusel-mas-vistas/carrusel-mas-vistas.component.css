@@ -1,0 +1,73 @@
+.movie-carousel {
+  padding: 20px;
+  position: relative;
+}
+
+.movie-list-container {
+  overflow: hidden; /* Oculta la barra de desplazamiento */
+  width: 100%;
+}
+
+.movie-list {
+  display: flex;
+  transition: transform 1s ease-in-out; /* Movimiento suave */
+}
+
+.movie-item {
+  min-width: 150px;
+  flex: 0 0 auto;
+  margin-right: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.movie-item img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ranking {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* Flechas */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333; /* Color del texto */
+  font-size: 24px; /* Tamaño de la fuente para que se vea bien */
+  border: none; /* Sin borde */
+  background: none; /* Sin fondo */
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves para el color y el tamaño */
+}
+
+.left-arrow {
+  left: 10px; /* Ajusta la posición de la flecha izquierda */
+}
+
+.right-arrow {
+  right: 10px; /* Ajusta la posición de la flecha derecha */
+}
+
+.carousel-arrow:hover {
+  color: #007bff; /* Cambia el color al pasar el mouse */
+  transform: scale(1.2); /* Aumenta el tamaño al pasar el mouse */
+}
+
+.carousel-arrow:disabled {
+  color: #ccc; /* Color gris para el botón deshabilitado */
+  cursor: not-allowed; /* Cambia el cursor */
+}
